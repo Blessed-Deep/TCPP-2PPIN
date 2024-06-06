@@ -4,9 +4,11 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.decomposition import PCA
 
+# Load data from Excel files (replace with your actual file paths)
 covid_scaled = pd.read_excel("outputs/corona_centrality_measures/corona_data_for_analysis/corona_centrality_scaled_data.xlsx")
 influenza_scaled = pd.read_excel("outputs/influenza_centrality_measures/influenza_data_for_analysis/influenza_centrality_scaled_data.xlsx")
 
+# Drop unnecessary columns
 covid_scaled = covid_scaled.drop(['Node', 'corona_nodes'], axis=1)
 influenza_scaled = influenza_scaled.drop(['Node', 'influenza_nodes'], axis=1)
 
